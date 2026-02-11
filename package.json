@@ -1,0 +1,31 @@
+{
+  "name": "@cloud9-labs/mcp-notion",
+  "version": "0.1.0",
+  "description": "MCP server for Notion API - manage databases, pages, blocks, and search across your workspace",
+  "type": "module",
+  "bin": {
+    "mcp-notion": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": ["mcp", "notion", "knowledge-base", "wiki", "ai", "model-context-protocol"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud9-labs/mcp-notion.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

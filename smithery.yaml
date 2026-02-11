@@ -1,0 +1,19 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - notionApiKey
+    properties:
+      notionApiKey:
+        type: string
+        title: "Notion API Key"
+        description: "Your Notion Internal Integration token. Get it from https://www.notion.so/my-integrations"
+  commandFunction: |
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        NOTION_API_KEY: config.notionApiKey
+      }
+    })
